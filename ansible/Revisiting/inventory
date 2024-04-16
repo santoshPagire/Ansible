@@ -1,0 +1,15 @@
+#Create an Ansible inventory file called inventory for host node01 under /home/bob/playbooks directory.
+
+
+#Below are the details of node01:
+
+
+#Hostname: node01
+
+#User: bob
+
+#Password: caleston123
+
+
+
+node01 ansible_host=node01 ansible_ssh_pass=caleston123

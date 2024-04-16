@@ -1,0 +1,14 @@
+#We already have an inventory file /home/bob/playbooks/inventory. Add an alias for node02 host in it. Find the below details for the node02 host:
+
+
+Hostname: node02
+
+User: bob
+
+Password: caleston123
+
+
+
+
+
+node02 ansible_host=node02 ansible_ssh_pass=caleston123

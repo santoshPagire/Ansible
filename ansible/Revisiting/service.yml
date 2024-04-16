@@ -1,0 +1,20 @@
+#a. On student-node create an Ansible playbook called service.yml under /home/bob/playbooks/ directory. Further configure it to install vsftpd package on both nodes i.e node01 and node02.
+
+
+#b. The playbook must start the vsftpd service on both nodes.
+
+
+#c. The inventory /home/bob/playbooks/inventory is already there on student-node.
+
+
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Install httpd package
+    yum: name=vsftpd state=installed
+
+  - name: Start service
+    service:
+      name: vsftpd
+      state: started

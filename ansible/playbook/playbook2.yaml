@@ -1,0 +1,7 @@
+---
+- name: 'Execute a command to display hosts file on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Task to display hosts files'
+      command: 'cat /etc/hosts'

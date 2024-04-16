@@ -1,0 +1,16 @@
+#Create a playbook called archive.yml under /home/bob/playbooks directory on student-node, an inventory file called inventory is already placed under /home/bob/playbooks directory`. Perform below task using this playbook:
+
+
+#Create an archive of /usr/src/ecommerce/ directory present on each node ie. node01 and node02. The archive name must be demo.tar.gz (make sure that archive format is tar.gz) and save it under /opt/ecommerce/ directory on each node itself.
+
+
+
+
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Create an archive demo.tar.gz
+    archive:
+      path: /usr/src/ecommerce/
+      dest: /opt/ecommerce/demo.tar.gz

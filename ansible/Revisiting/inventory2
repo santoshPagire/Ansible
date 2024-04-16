@@ -1,0 +1,5 @@
+#Create a group called web_nodes in /home/bob/playbooks/inventory inventory file, further add node01 and node02 as a member of this group.
+
+[web_nodes]
+node01
+node02

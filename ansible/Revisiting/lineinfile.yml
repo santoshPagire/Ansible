@@ -1,0 +1,20 @@
+#We already have an inventory file called inventory under /home/bob/playbooks directory on student-node. Write a playbook called lineinfile.yml under /home/bob/playbooks directory. Perform below given tasks using this playbook :
+
+
+#On node01, a file called /var/www/html/index.html is available. It already has some content. Using Ansible lineinfile module add the below given content in it:
+
+#Welcome to KodeKloud Labs!
+
+#Also make sure to preserve the existing content and this new line must be added at the top of the file.
+
+
+
+---
+- hosts: node01
+  become: true
+  tasks:
+  - lineinfile:
+      path: /var/www/html/index.html
+      line: 'Welcome to KodeKloud Labs!'
+      state: present
+      insertbefore: BOF

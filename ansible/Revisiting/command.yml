@@ -1,0 +1,10 @@
+#Create a playbook called /home/bob/playbooks/command.yml which should execute the command to display the contents of file /etc/resolv.conf on localhost. Make sure to use command module to complete this task.
+
+
+---
+- name: Execute a command on localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Execute a command
+      command: cat /etc/resolv.conf
